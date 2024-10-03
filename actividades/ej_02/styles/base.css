@@ -1,36 +1,61 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff;
-    color: #000080;
-}
-
-header {
-    background-color: #176fc7;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    color: white;
-}
-
-main {
-    min-height: 70vh;
-}
-
-footer {
-    background-color: #176fc7;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 5px 0;
-}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura en D&D</title>
+    <style>
+        body {
+            background-color: #1c1b1b;
+            color: #e5e5e5;
+            font-family: 'Georgia', serif;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            color: #b03030;
+        }
+        .button-container {
+            margin-top: 50px;
+        }
+        button {
+            background-color: #b03030;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #8b0000;
+        }
+        .image-container {
+            margin-top: 30px;
+        }
+        .dragon-image {
+            width: 200px;
+            height: auto;
+            margin: 20px;
+            border: 3px solid #b03030;
+            border-radius: 10px;
+        }
+        .dragon-image:hover {
+            border-color: #8b0000;
+        }
+        .led-container {
+            margin-top: 40px;
+        }
+        .led {
+            width: 50px;
+            height: 50px;
+            background-color: grey;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .led-on {
+            background-color: red;
+        }
+    </style>

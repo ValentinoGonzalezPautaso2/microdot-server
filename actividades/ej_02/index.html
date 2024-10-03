@@ -3,21 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad #</title>
+    <title>Actividad #1</title>
     <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
     <header>
-        <h1>Actividad #</h1>
+        <h1>Actividad #2</h1>
     </header>
     <main>
+    <!-- Contenedor de los botones -->
+    <div id="outer">
+        <br /><br /><br />
+        <div button type="button_slide slide_left botones" onclick="toggleLed(1)">LED1</div>
+        <br /><br /><br />
+        <div button type="button_slide slide_left botones" onclick="toggleLed(2)">LED2</div>
+        <br /><br /><br />
+        <div button type="button_slide slide_left botones" onclick="toggleLed(3)">LED3</div>
+    </div>
+
+    <div class="button-container">
+        <button onclick="alert('Has elegido la espada maldita.'),">LED1</button>
+        <button onclick="alert('Te adentras en las mazmorras sombrías.')">LED2</button>
+        <button onclick="alert('El dragón oscuro te espera.')">LED3</button>
+    </div>
+
+    <div class="image-container">
+        <img src="https://www.bing.com/images/search?view=detailV2&ccid=wa%2bwqWp0&id=E1B1DB1AA043B8097E01B0B59154AA0A6556EDAB&thid=OIP.wa-wqWp0maSlXv6p8lA4xAHaEK&mediaurl=https%3a%2f%2fwww.hdwallpapers.in%2fdownload%2ffantasy_black_dragon_closeup_photo_with_mouth_open_hd_dreamy-HD.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.c1afb0a96a7499a4a55efea9f25038c4%3frik%3dq%252b1WZQqqVJG1sA%26pid%3dImgRaw%26r%3d0&exph=1440&expw=2560&q=black+dragon&simid=608017084804513180&FORM=IRPRST&ck=17C53D8643FD0860C3C29F5F90187565&selectedIndex=2&itb=0" alt="Dragón oscuro" class="dragon-image">
+        <img src="https://www.bing.com/images/search?view=detailV2&ccid=o9peBnjG&id=16300C4710F420F3F94EBCD0226D7DCBB34FAF5F&thid=OIP.o9peBnjGIWq90CCl5VH4NAHaFw&mediaurl=https%3a%2f%2fimages.fineartamerica.com%2fimages%2fartworkimages%2fmediumlarge%2f3%2finfernal-dragon-satans-visage-caleb-ongoro.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.a3da5e0678c6216abdd020a5e551f834%3frik%3dX69Ps8t9bSLQvA%26pid%3dImgRaw%26r%3d0&exph=700&expw=900&q=infernal+dragon&simid=608003972254098886&FORM=IRPRST&ck=4C0681D48DFAECBCAAE297AFB0A273CA&selectedIndex=4&itb=0" alt="Dragón infernal" class="dragon-image">
+        <img src="https://www.bing.com/images/search?view=detailV2&ccid=EA9kqeNv&id=4487D948E3BC9AFFE33433CDAB01487AEB81F72A&thid=OIP.EA9kqeNvxRzIyPlBoghjrwHaEK&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.100f64a9e36fc51cc8c8f941a20863af%3frik%3dKveB63pIAavNMw%26riu%3dhttp%253a%252f%252fgetwallpapers.com%252fwallpaper%252ffull%252f3%252f0%252f0%252f952113-free-download-shadow-dragon-wallpaper-1920x1080-windows-xp.jpg%26ehk%3d4dp8zBBebNNeSoO41oyB%252f2fZtl3Jz0lNeBNxo58FWc8%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1080&expw=1920&q=shadow+dragon&simid=608031855181784695&FORM=IRPRST&ck=0E9CC6034BAE38E07080F73355A13210&selectedIndex=0&itb=0" alt="Dragón de sombras" class="dragon-image">
+    </div>
+
+</div>
+
+<script>
+    function toggleLed(led) {
+        fetch(`/toggle/led/${led}`);
+    }
+</script>
+
     </main>
     <footer>
         <p>Representación Frontal y Visual de Datos</p>
         <p>Computadoras de Aeronaves</p>
-        <p>Alumno XX</p>
+        <p>Alumno VALENTINO GONZALEZ PAUTASO</p>
         <p>Prof. Carlassara Fabrizio</p>
-        <p id="fecha"></p>
+        <p id="03/10/2024"></p>
     </footer>
     <script src="scripts/base.js"></script>
 </body>
