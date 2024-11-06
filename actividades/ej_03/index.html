@@ -3,19 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad #</title>
+    <title>Actividad #3</title>
     <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
     <header>
-        <h1>Actividad #</h1>
+        <h1>Actividad #3</h1>
     </header>
     <main>
+        <h2>Selecciona el Setpoint de Temperatura</h2>
+        <div>
+            <input 
+                type="range" 
+                id="setpointSlider" 
+                min="0" 
+                max="30" 
+                step="1" 
+                value="15" 
+                oninput="updateDisplay(this.value)"
+                onmouseup="sendSetpoint(this.value)"
+            >
+            <span id="setpointValue">15</span>°C
+        </div>
     </main>
+
+    <script>
+        function updateDisplay(value) {
+            document.getElementById("setpointValue").innerText = value;
+        }
+
+        function sendSetpoint(value) {
+            fetch('/updateSetpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ setpoint: value })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Setpoint actualizado:', data);
+            })
+            .catch(error => {
+                console.error('Error al enviar el setpoint:', error);
+            });
+        }
+    </script>
+
     <footer>
         <p>Representación Frontal y Visual de Datos</p>
         <p>Computadoras de Aeronaves</p>
-        <p>Alumno XX</p>
+        <p>Alumno Valentino Gonzalez Pautaso</p>
         <p>Prof. Carlassara Fabrizio</p>
         <p id="fecha"></p>
     </footer>
